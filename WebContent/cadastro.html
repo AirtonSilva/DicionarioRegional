@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Cadastrar usuário no sistema</title>
+</head>
+<body>
+	Por favor, preencha seus dados abaixo.
+
+	<form action='CadastraUsuario' method="POST">
+		<fieldset>
+			<legend>Dados de login</legend>
+			<!-- cellspacing="10" -->
+			<table>
+				<tr>
+					<td><label for="email">E-mail: </label></td>
+					<td align="left"><input type="text" required type="text" name="email"></td>
+				</tr>
+				<tr>
+					<td><label for="login">Login de usuário: </label></td>
+					<td align="left"><input type="text" required name="login">
+					</td>
+				</tr>
+				<tr>
+					<td><label for="passconfirm">Informe a senha: </label></td>
+					<td align="left">
+						<input type="password" required
+						pattern="[a-z]{6}" placeholder="6 letras " name="passconfirm"
+						onchange="form.pwd2.pattern = this.value;">
+					</td>
+					
+				</tr>
+				<tr>
+					<td><label for="passconfirm">Confirme a senha:</label></td>
+					<td align="left">
+						<input type="password" required
+						pattern="[a-z]{6}" placeholder="6 letras" name="passconfirm2">
+					</td>				
+				</tr>
+				
+			</table>
+		</fieldset>
+		<input type="submit"> 
+		<input type="reset" value="Limpar">
+	</form>
+
+</body>
+</html>
